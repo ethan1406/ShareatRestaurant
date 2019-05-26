@@ -49,7 +49,7 @@ export default class LoginScreen extends Component<Props> {
         } catch (err) {
           console.log(err);
         }
-          this.props.navigation.navigate('Map');
+          this.props.navigation.navigate('Main');
       } 
     }).catch((err) => {
       this.setState({errorMessage: err.response.data.error});
