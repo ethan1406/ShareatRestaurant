@@ -8,11 +8,11 @@ import {StyleSheet,
   TouchableOpacity,
   SafeAreaView,
   Divider} from 'react-native';
-import MainScreenTabContainer from './MainScreenTab';
+import LandingScreenTabContainer from './LandingScreenTab';
 
 type Props = {};
 
-export default class MainScreen extends Component<props> {
+export default class LandingScreen extends Component<props> {
 
 	constructor(props) {
 		super(props);
@@ -31,7 +31,7 @@ export default class MainScreen extends Component<props> {
             {this.state.date}
           </Text>
         </View>
-        <MainScreenTabContainer />
+        <LandingScreenTabContainer />
         <View style = {styles.container}>
           <Text style = {styles.rewardHeader}> 
             REWARDS & PROMOTIONS
@@ -51,23 +51,25 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   header: {
-    flex: .17,
+    flex: .35,
     alignItems: 'center',
   },
   logo: {
-  	width: 140,
-  	height: 40,
+  	width: 250,
+  	height: 80,
   },
   date: {
     color: 'gray',
-    fontSize: 13
+    fontSize: 20
   },
   rewardHeader: {
     alignSelf: 'center',
-    paddingTop: 80
+    paddingTop: 130,
+    fontSize: 20
   },
   divider: {
     borderColor: '#F3A545',
-    borderBottomWidth: 2
+    borderBottomWidth: 3
   }
 });
+
