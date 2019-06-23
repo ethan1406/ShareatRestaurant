@@ -26,7 +26,7 @@ export default class LandingScreen extends Component<props> {
 		return (
       <View style = {styles.container}>
         <View style = {styles.header}>
-          <Image style = {styles.logo} source={require('../img/shareat_logo.png')} />
+          <Image style = {styles.logo} source={require('../img/ShareatPOS.png')} />
           <Text style = {styles.date}>
             {this.state.date}
           </Text>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-  	width: 250,
+  	width: 450,
   	height: 80,
   },
   date: {

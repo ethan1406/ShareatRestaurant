@@ -20,7 +20,7 @@ export default class LoginScreen extends Component<Props> {
     this.state = { 
       email: 'ethan3@gmail.com',
       pwd: 'haha12345',
-      errorMessage: ''
+      errorMessage: '',
      };
   }
 

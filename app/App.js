@@ -2,6 +2,7 @@
 
 import { createStackNavigator,
   createAppContainer,
+  createSwitchNavigator
 } from 'react-navigation';
 import {createMaterialBottomTabNavigator} from "react-navigation-material-bottom-tabs";
 import LoginScreen from './screens/LoginScreen';
@@ -9,6 +10,7 @@ import LandingScreen from './screens/LandingScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import RewardsScreen from './screens/RewardsScreen';
+import SplashScreen from './screens/SplashScreen';
 
 const main = createMaterialBottomTabNavigator(
 {
@@ -56,5 +58,10 @@ const AppNavigator = createStackNavigator(
 
 );
 
+const InitialNavigator = createSwitchNavigator({
+  Splash: SplashScreen,
+  App: AppNavigator
+});
 
-export default createAppContainer(AppNavigator);
+
+export default createAppContainer(InitialNavigator);
