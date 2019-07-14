@@ -7,18 +7,14 @@ import {StyleSheet,
   Button
 } from 'react-native';
 
-export default class ProfilesScreen extends Component<props> {
-	render() {
-		return(
-			<View style = {styles.container} >
+export default class ProfileScreen extends Component<props> {
+  render() {
+    return(
+      <View style = {styles.container} >
         <Text style = {styles.header}> PROFILE </Text>
-        <Button
-          onPress = {() => this.props.navigation.navigate('Settings')}
-          title = "Settings"
-          color = 'grey' />
-			</View>
-		)
-	}
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({

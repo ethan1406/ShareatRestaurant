@@ -27,11 +27,11 @@ class OpenTab extends Component<props>{
 	render() {
 		return(
 			<View>
-				<Text style = {{fontSize: 50}}> Table #      Order Total </Text>
+				<Text style = {{fontSize: 30}}> Table #      Order Total </Text>
 				<FlatList
 				data = {this.state.data}
 				renderItem = {( { item }) => (
-					<Text  style = {{fontSize: 50}} >        {item.tableNumber}               ${item.orderTotal}</Text>)}
+					<Text  style = {{fontSize: 30}} >        {item.tableNumber}               ${item.orderTotal}</Text>)}
 				/>
 			</View>
 		)

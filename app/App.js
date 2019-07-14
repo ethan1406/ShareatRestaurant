@@ -1,5 +1,6 @@
 'use strict';
 
+import React, {Component} from 'react';
 import { createStackNavigator,
   createAppContainer,
   createSwitchNavigator
@@ -11,14 +12,55 @@ import SettingsScreen from './screens/SettingsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import RewardsScreen from './screens/RewardsScreen';
 import SplashScreen from './screens/SplashScreen';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 
 const main = createMaterialBottomTabNavigator(
 {
-  LandingScreen,
-  RewardsScreen,
-  ProfileScreen
+  LandingScreen: {
+    screen: LandingScreen,
+    navigationOptions: {
+          tabBarLabel: null,
+          tabBarIcon: ({ tintColor, focused }) => (
+            <AntDesign
+              name={focused ? 'profile' : 'profile'}
+              size={25}
+              style={{ color: focused? '#F3A545' : tintColor }}
+            />
+          ),
+        }
+  },
+
+  RewardsScreen: {
+    screen: RewardsScreen,
+    navigationOptions: {
+          tabBarLabel: null,
+          tabBarIcon: ({ tintColor, focused }) => (
+            <AntDesign
+              name={focused ? 'gift' : 'gift'}
+              size={25}
+              style={{ color: focused? '#F3A545' : tintColor }}
+            />
+          ),
+        }
+  },
+
+  SettingsScreen: {
+    screen: SettingsScreen,
+    navigationOptions: {
+          tabBarLabel: null,
+          tabBarIcon: ({ tintColor, focused }) => (
+            <AntDesign
+              name={focused ? 'setting' : 'setting'}
+              size={25}
+              style={{ color: focused? '#F3A545' : tintColor }}
+            />
+          ),
+        }
+  }
 }, {
   initialRouteName: 'LandingScreen',
+  labeled: false,
   activeColor: '#F3A545',
   inactiveColor: 'black',
   barStyle: {backgroundColor: 'white'},
@@ -40,8 +82,8 @@ const AppNavigator = createStackNavigator(
         }
       },
       Main: main,
-      Settings: {
-        screen: SettingsScreen,
+      Profile: {
+        screen: ProfileScreen,
         navigationOptions: {
           header: null,
         }

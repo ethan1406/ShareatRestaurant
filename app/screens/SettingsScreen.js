@@ -12,6 +12,10 @@ export default class SettingsScreen extends Component<props> {
     return(
       <View style = {styles.container} >
         <Text style = {styles.header}> SETTINGS </Text>
+        <Button
+          onPress = {() => this.props.navigation.navigate('Profile')}
+          title = "PROFILE"
+          color = 'grey' />
       </View>
     )
   }
