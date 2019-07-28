@@ -18,7 +18,7 @@ export default class LoginScreen extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = { 
-      email: 'ethan3@gmail.com',
+      email: 'qinwest@gmail.com',
       pwd: 'haha12345',
       errorMessage: '',
      };
@@ -36,16 +36,17 @@ export default class LoginScreen extends Component<Props> {
   }
 
   _login = async () => {
-    axios.post(baseURL + '/login/', 
+    axios.post(baseURL + 'merchant/login', 
       {email: this.state.email, password: this.state.pwd})
     .then(async (response) => {
       if(response.status == 200){
         try {
-          await AsyncStorage.setItem('email',response.data.email);
-          await AsyncStorage.setItem('userId',response.data.id);
-          await AsyncStorage.setItem('firstName',response.data.firstName);
-          await AsyncStorage.setItem('lastName',response.data.lastName);
-          await AsyncStorage.setItem('loyaltyPoints', JSON.stringify(response.data.loyaltyPoints));
+          //await AsyncStorage.setItem('email',response.email);
+          //await AsyncStorage.setItem('userId',response.id);
+          //await AsyncStorage.setItem('restaurantName',response.name);
+          //await AsyncStorage.setItem('firstName',response.data.firstName);
+          //await AsyncStorage.setItem('lastName',response.data.lastName);
+          //await AsyncStorage.setItem('loyaltyPoints', JSON.stringify(response.data.loyaltyPoints));
         } catch (err) {
           console.log(err);
         }

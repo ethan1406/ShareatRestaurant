@@ -19,7 +19,7 @@ class OpenTab extends Component<props>{
 		try {
 			const response = await axios.get(baseURL + 'merchant/getActiveParties');
 			this.setState({data: response.data.activeParties});
-			//console.log(this.state.data);
+			console.log(this.state.data);
 		} catch (err) {
 			console.warn(err);
 		}

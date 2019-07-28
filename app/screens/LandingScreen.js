@@ -19,7 +19,7 @@ export default class LandingScreen extends Component<props> {
     let todayDate = new Date();
     this.state = {
       date: todayDate.toDateString(),
-      restaurantName: 'Boiling Point',
+      restaurantName: 'Qin West',
       userName: 'Anthony Davis'
     }
 	}
