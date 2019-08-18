@@ -27,14 +27,14 @@ class OpenTab extends Component<props>{
 	render() {
 		return(
 			<View>
-				<Text style = {{fontSize: 30}}> Table #      Order Total </Text>
-				<FlatList
-				data = {this.state.data}
-				renderItem = {( { item }) => (
-					<Text  style = {{fontSize: 30}} >        {item.tableNumber}               ${item.orderTotal}</Text>)}
-				/>
+			<Text style = {{fontSize: 30}}> Table #      Order Total </Text>
+			<FlatList
+			data = {this.state.data}
+			renderItem = {( { item }) => (
+				<Text  style = {{fontSize: 30}} >        {item.tableNumber}               ${item.orderTotal}</Text>)}
+			/>
 			</View>
-		)
+			)
 	}
 }
 
@@ -42,39 +42,39 @@ class CompletedTab extends Component{
 	render() {
 		return(
 			<View>
-				<Text> CompletedTab </Text>
+			<Text> CompletedTab </Text>
 			</View>
-		)
+			)
 	}
 }
 
 const LandingScreenTabNavigator = createMaterialTopTabNavigator(
-	{
-		OpenTab: {
-			screen: OpenTab,
-			navigationOptions:{
-				tabBarLabel: 'OPEN',
-			}
-		},
-		CompletedTab: {
-			screen: CompletedTab,
-			navigationOptions: {
-				tabBarLabel: 'COMPLETED',
-			}
+{
+	OpenTab: {
+		screen: OpenTab,
+		navigationOptions:{
+			tabBarLabel: 'OPEN',
 		}
 	},
-	{
-		tabBarOptions:{
-			activeTintColor: '#F3A545',
-			inactiveTintColor: 'grey',
-			labelStyle:{
-				fontSize: 20
-			},
-			style: {
-				backgroundColor:'white'
-			}
+	CompletedTab: {
+		screen: CompletedTab,
+		navigationOptions: {
+			tabBarLabel: 'COMPLETED',
 		}
 	}
+},
+{
+	tabBarOptions:{
+		activeTintColor: '#F3A545',
+		inactiveTintColor: 'grey',
+		labelStyle:{
+			fontSize: 20
+		},
+		style: {
+			backgroundColor:'white'
+		}
+	}
+}
 )
 
 const LandingScreenTabContainer = createAppContainer(LandingScreenTabNavigator);

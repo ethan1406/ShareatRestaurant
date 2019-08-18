@@ -13,6 +13,7 @@ import SettingsScreen from './screens/SettingsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import RewardsScreen from './screens/RewardsScreen';
 import SplashScreen from './screens/SplashScreen';
+import AddRewardScreen from './screens/AddRewardScreen';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 
@@ -84,6 +85,12 @@ const AppNavigator = createStackNavigator(
       Main: main,
       Profile: {
         screen: ProfileScreen,
+        navigationOptions: {
+          header: null,
+        }
+      },
+      AddReward: {
+        screen: AddRewardScreen,
         navigationOptions: {
           header: null,
         }

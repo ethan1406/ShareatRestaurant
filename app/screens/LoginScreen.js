@@ -5,15 +5,15 @@
  * @format
  * @flow
  */
-'use strict';
+ 'use strict';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image, TouchableOpacity, TextInput, KeyboardAvoidingView, AsyncStorage} from 'react-native';
-import {baseURL} from '../Constants';
-import axios from 'axios';
+ import React, {Component} from 'react';
+ import {Platform, StyleSheet, Text, View, Image, TouchableOpacity, TextInput, KeyboardAvoidingView, AsyncStorage} from 'react-native';
+ import {baseURL} from '../Constants';
+ import axios from 'axios';
 
-type Props = {};
-export default class LoginScreen extends Component<Props> {
+ type Props = {};
+ export default class LoginScreen extends Component<Props> {
 
   constructor(props) {
     super(props);
@@ -21,16 +21,16 @@ export default class LoginScreen extends Component<Props> {
       email: 'qinwest@gmail.com',
       pwd: 'haha12345',
       errorMessage: '',
-     };
+    };
   }
 
   static navigationOptions = ({navigation}) => {
     return{
       headerLeft:( 
         <TouchableOpacity onPress={() => navigation.navigate('First')}>
-           <Image style={{height: 30, width: 30, marginLeft: 20}} source={require('../img/backbtn.png')} />
+        <Image style={{height: 30, width: 30, marginLeft: 20}} source={require('../img/backbtn.png')} />
         </TouchableOpacity>
-      ),
+        ),
       headerTransparent: true
     };
   }
@@ -44,13 +44,10 @@ export default class LoginScreen extends Component<Props> {
           //await AsyncStorage.setItem('email',response.email);
           //await AsyncStorage.setItem('userId',response.id);
           //await AsyncStorage.setItem('restaurantName',response.name);
-          //await AsyncStorage.setItem('firstName',response.data.firstName);
-          //await AsyncStorage.setItem('lastName',response.data.lastName);
-          //await AsyncStorage.setItem('loyaltyPoints', JSON.stringify(response.data.loyaltyPoints));
         } catch (err) {
           console.log(err);
         }
-          this.props.navigation.navigate('Main');
+        this.props.navigation.navigate('Main');
       } 
     }).catch((err) => {
       this.setState({errorMessage: err.response.data.error});
@@ -60,28 +57,28 @@ export default class LoginScreen extends Component<Props> {
   render() {
     return (
       <KeyboardAvoidingView style={styles.container} behavior='padding' resizeMode='contain'>
-        <Text style={styles.loginMessage}>LOG IN WITH EMAIL</Text>
-        <View style={[styles.stack, {marginTop: 60}]} resizeMode='contain'>
-          <TextInput style={styles.textInput} multiline={false}
-          value={this.state.email} onChangeText={(email) => this.setState({email})}/>
-          <TextInput style={styles.textInput} multiline={false} secureTextEntry={true}
-          value={this.state.pwd} onChangeText={(pwd) => this.setState({pwd})}/>
-          <TouchableOpacity style={styles.signupBtn} onPress={()=> {this._login();}} color='#000000'>
-              <Text style={styles.btnText}>SIGN IN</Text>
-          </TouchableOpacity>
-          <Text style={styles.errorMessage}>{this.state.errorMessage}</Text>
-        </View>
-        <View style={[styles.stack, {marginTop: -60}]} resizeMode='contain'>
-          <Text style={{color: 'gray'}}> connect with </Text>
-          <TouchableOpacity onPress={() => {}}>
-             <Image style={{height: 50, width: 50}} source={require('../img/facebook.png')} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={()=> {}} color='#000000' onPress={()=> this.props.navigation.navigate('Signup')}>
-              <Text style={[styles.btnText, {fontSize: 15, color:'#F3A545'}]}> Sign up for Shareat </Text>
-          </TouchableOpacity>
-        </View>
+      <Text style={styles.loginMessage}>LOG IN WITH EMAIL</Text>
+      <View style={[styles.stack, {marginTop: 60}]} resizeMode='contain'>
+      <TextInput style={styles.textInput} multiline={false}
+      value={this.state.email} onChangeText={(email) => this.setState({email})}/>
+      <TextInput style={styles.textInput} multiline={false} secureTextEntry={true}
+      value={this.state.pwd} onChangeText={(pwd) => this.setState({pwd})}/>
+      <TouchableOpacity style={styles.signupBtn} onPress={()=> {this._login();}} color='#000000'>
+      <Text style={styles.btnText}>SIGN IN</Text>
+      </TouchableOpacity>
+      <Text style={styles.errorMessage}>{this.state.errorMessage}</Text>
+      </View>
+      <View style={[styles.stack, {marginTop: -60}]} resizeMode='contain'>
+      <Text style={{color: 'gray'}}> connect with </Text>
+      <TouchableOpacity onPress={() => {}}>
+      <Image style={{height: 50, width: 50}} source={require('../img/facebook.png')} />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=> {}} color='#000000' onPress={()=> this.props.navigation.navigate('Signup')}>
+      <Text style={[styles.btnText, {fontSize: 15, color:'#F3A545'}]}> Sign up for Shareat </Text>
+      </TouchableOpacity>
+      </View>
       </KeyboardAvoidingView>
-    );
+      );
   }
 }
 

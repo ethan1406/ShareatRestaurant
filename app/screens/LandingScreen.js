@@ -8,51 +8,51 @@ import {StyleSheet,
   TouchableOpacity,
   SafeAreaView,
   Divider} from 'react-native';
-import LandingScreenTabContainer from './LandingScreenTab';
+  import LandingScreenTabContainer from './LandingScreenTab';
 
-type Props = {};
+  type Props = {};
 
-export default class LandingScreen extends Component<props> {
+  export default class LandingScreen extends Component<props> {
 
-	constructor(props) {
-		super(props);
+   constructor(props) {
+    super(props);
     let todayDate = new Date();
     this.state = {
       date: todayDate.toDateString(),
       restaurantName: 'Qin West',
       userName: 'Anthony Davis'
     }
-	}
+  }
 
-	render() {
-		return (
+  render() {
+    return (
       <View style = {styles.container}>
-        <View style = {styles.horizontal}>
-          <Image style = {styles.logo} source={require('../img/ShareatPOS.png')} />
-          <Text style = {styles.restaurantHeader}>
-            {this.state.restaurantName}
-          </Text>
-          <TouchableOpacity style = {styles.user}
-           onPress = {() => this.props.navigation.navigate('Profile')}>
-            <Image style = {styles.userIcon} source={require('../img/defaultUserFemale.png')} />
-            <Text style = {styles.restaurantHeader}>
-              {this.state.userName}
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <Text style = {styles.date}>
-          {this.state.date}
-        </Text>
-        <LandingScreenTabContainer />
-        <View style = {styles.container}>
-          <Text style = {styles.rewardHeader}> 
-            REWARDS & PROMOTIONS
-          </Text>
-          <View style = {styles.divider}/>
-          </View>
-        </View>
-			)
-	}
+      <View style = {styles.horizontal}>
+      <Image style = {styles.logo} source={require('../img/ShareatPOS.png')} />
+      <Text style = {styles.restaurantHeader}>
+      {this.state.restaurantName}
+      </Text>
+      <TouchableOpacity style = {styles.user}
+      onPress = {() => this.props.navigation.navigate('Profile')}>
+      <Image style = {styles.userIcon} source={require('../img/defaultUserFemale.png')} />
+      <Text style = {styles.restaurantHeader}>
+      {this.state.userName}
+      </Text>
+      </TouchableOpacity>
+      </View>
+      <Text style = {styles.date}>
+      {this.state.date}
+      </Text>
+      <LandingScreenTabContainer />
+      <View style = {styles.container}>
+      <Text style = {styles.rewardHeader}> 
+      REWARDS & PROMOTIONS
+      </Text>
+      <View style = {styles.divider}/>
+      </View>
+      </View>
+      )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -77,28 +77,27 @@ const styles = StyleSheet.create({
   date: {
     color: 'gray',
     fontSize: 22,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   rewardHeader: {
     alignSelf: 'center',
     paddingTop: 130,
-    fontSize: 20
+    fontSize: 20,
   },
   divider: {
     borderColor: '#F3A545',
-    borderBottomWidth: 3
+    borderBottomWidth: 3,
   },
   restaurantHeader: {
     color: 'gray',
-    fontSize: 28
+    fontSize: 28,
   },
   user: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   userIcon: {
     width: 40,
-    height: 40
+    height: 40,
   }
 });
-

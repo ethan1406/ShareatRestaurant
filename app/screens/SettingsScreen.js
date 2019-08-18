@@ -20,44 +20,44 @@ export default class SettingsScreen extends Component<props> {
   render() {
     return(
       <ScrollView resizeMode='contain' contentContainerStyle={styles.container}>
-        <Text style={styles.restaurantName}> {this.state.restaurantName} </Text>
-        <View style={styles.emailContainer}>
-          <Image style={styles.emailIcon} source={require('../img/email.png')} />
-          <Text style={styles.emailText}> {this.state.email} </Text>
-        </View>
-        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Profile')} color='#000000'>
-            <Text style={styles.buttonText}> Edit Profile </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={()=> this.props.navigation.navigate('Login')} color='#000000'>
-            <Text style={styles.buttonText}> Sign Out </Text>
-        </TouchableOpacity>
-        <View style={{marginVertical: 40}}></View>
-        <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
-          <Image style={styles.settingImage} source={require('../img/statistics.png')} />
-          <Text style = {styles.settingText}> Statistics </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
-          <Image style={styles.optionImage} source={require('../img/payment.png')} />
-          <Text style = {styles.settingText}> Payment </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
-          <Image style={styles.optionImage} source={require('../img/notification.png')} />
-          <Text style = {styles.settingText}> Notification </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
-          <Image style={styles.settingImage} source={require('../img/privacy.png')} />
-          <Text style = {styles.settingText}> Privacy & Security </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
-          <Image style={styles.settingImage} source={require('../img/receipt.png')} />
-          <Text style = {styles.settingText}> Send Feedback </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
-          <Image style={styles.optionImage} source={require('../img/about.png')} />
-          <Text style = {styles.settingText}> About </Text>
-        </TouchableOpacity>
+      <Text style={styles.restaurantName}> {this.state.restaurantName} </Text>
+      <View style={styles.emailContainer}>
+      <Image style={styles.emailIcon} source={require('../img/email.png')} />
+      <Text style={styles.emailText}> {this.state.email} </Text>
+      </View>
+      <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Profile')} color='#000000'>
+      <Text style={styles.buttonText}> Edit Profile </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={()=> this.props.navigation.navigate('Login')} color='#000000'>
+      <Text style={styles.buttonText}> Sign Out </Text>
+      </TouchableOpacity>
+      <View style={{marginVertical: 40}}></View>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <Image style={styles.settingImage} source={require('../img/statistics.png')} />
+      <Text style = {styles.settingText}> Statistics </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <Image style={styles.optionImage} source={require('../img/payment.png')} />
+      <Text style = {styles.settingText}> Payment </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <Image style={styles.optionImage} source={require('../img/notification.png')} />
+      <Text style = {styles.settingText}> Notification </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <Image style={styles.settingImage} source={require('../img/privacy.png')} />
+      <Text style = {styles.settingText}> Privacy & Security </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <Image style={styles.settingImage} source={require('../img/receipt.png')} />
+      <Text style = {styles.settingText}> Send Feedback </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <Image style={styles.optionImage} source={require('../img/about.png')} />
+      <Text style = {styles.settingText}> About </Text>
+      </TouchableOpacity>
       </ScrollView>
-    )
+      )
   }
 }
 

@@ -27,10 +27,10 @@ export default class SplashScreen extends Component<props> {
   render() {
     return(
       <View style = {styles.container} >
-        <Image style = {styles.logo} source={require('../img/ShareatPOS.png')} />
-        <Text style = {styles.header}> "INSERT CATCHY PHRASE HERE" </Text>
+      <Image style = {styles.logo} source={require('../img/ShareatPOS.png')} />
+      <Text style = {styles.header}> "INSERT CATCHY PHRASE HERE" </Text>
       </View>
-    )
+      )
   }
 }
 
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold'
   },
-    logo: {
+  logo: {
     width: 450,
     height: 80,
   }
