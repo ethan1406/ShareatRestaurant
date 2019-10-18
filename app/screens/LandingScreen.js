@@ -38,7 +38,7 @@ import {StyleSheet,
       <TouchableOpacity style = {styles.user}
       onPress = {() => this.props.navigation.navigate('Profile')}>
       <Image style = {styles.userIcon} source={require('../img/defaultUserFemale.png')} />
-      <Text style = {styles.restaurantHeader}>
+      <Text style = {styles.userName}>
       {this.state.userName}
       </Text>
       </TouchableOpacity>
@@ -60,12 +60,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   horizontal: {
-    flex: .18,
+    flex: .12,
     justifyContent:'space-between',
     flexDirection: 'row',
     alignItems: 'center',
     paddingLeft: 15,
-    paddingRight: 20,
+    paddingRight: 25,
   },
   logo: {
   	width: 220,
@@ -73,12 +73,18 @@ const styles = StyleSheet.create({
   },
   date: {
     color: 'gray',
-    fontSize: 22,
+    fontSize: 21,
     alignSelf: 'center',
   },
   restaurantHeader: {
     color: 'gray',
-    fontSize: 28,
+    fontSize: 25,
+    marginRight: 30,
+  },
+  userName: {
+    color: 'gray',
+    fontSize: 20,
+    marginLeft: 7,
   },
   user: {
     flexDirection: 'row',

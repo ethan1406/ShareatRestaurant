@@ -22,8 +22,6 @@ export default class SplashScreen extends Component<props> {
     if (data !== null) {
       this.props.navigation.navigate('App');
     }
-    StatusBar.setBarStyle( 'light-content',true)
-    StatusBar.setBackgroundColor('#F3A545')
   }
 
   render() {

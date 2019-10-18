@@ -22,11 +22,6 @@ class OpenTab extends Component<props>{
 				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
 				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
 				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
-				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
-				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
-				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
-				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
-				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
 				],
 		}
 	}
@@ -44,8 +39,8 @@ class OpenTab extends Component<props>{
 		return(
 			<View>
 		<Table>
-          <Row data={this.state.tableHead} borderStyle={{borderBottomWidth: 1, borderBottomColor: 'black'}} textStyle={styles.text} style={{backgroundColor: '#e5e5e5'}}/>
-          <Rows data={this.state.tableData} borderStyle={{borderBottomWidth: 1, borderBottomColor: 'black'}} textStyle={styles.text}/>
+          <Row data={this.state.tableHead} textStyle={styles.text} style={styles.topRow}/>
+          <Rows data={this.state.tableData} textStyle={styles.text} style={styles.rows}/>
         </Table>
 			</View>
 			)
@@ -54,9 +49,21 @@ class OpenTab extends Component<props>{
 
 const styles = StyleSheet.create({
 	text: {
-		fontSize: 25,
+		fontSize: 19,
 		alignSelf: 'center',
+		marginBottom: 15,
+		marginTop: 15,
+		color: '#808080'
 	},
+	topRow: {
+		backgroundColor: '#F7F7F7',
+		borderBottomColor: 'black',
+		borderBottomWidth: 1,
+	},
+	rows: {
+		borderBottomColor: 'black',
+		borderBottomWidth: 1,
+	}
 });
 
 class CompletedTab extends Component{
@@ -86,7 +93,7 @@ const LandingScreenTabNavigator = createMaterialTopTabNavigator(
 },
 {
 	tabBarOptions:{
-		activeTintColor: '#F3A545',
+		activeTintColor: '#ffa91f',
 		inactiveTintColor: 'grey',
 		labelStyle:{
 			fontSize: 20

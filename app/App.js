@@ -6,6 +6,7 @@ import { createStackNavigator,
   createSwitchNavigator,
   createBottomTabNavigator
 } from 'react-navigation';
+import {StatusBar} from 'react-native';
 import {createMaterialBottomTabNavigator} from "react-navigation-material-bottom-tabs";
 import LoginScreen from './screens/LoginScreen';
 import LandingScreen from './screens/LandingScreen';
@@ -16,6 +17,8 @@ import SplashScreen from './screens/SplashScreen';
 import AddRewardScreen from './screens/AddRewardScreen';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
+StatusBar.setBarStyle( 'light-content',true)
+StatusBar.setBackgroundColor('#ffa91f')
 
 const main = createBottomTabNavigator(
 {
@@ -39,7 +42,7 @@ const main = createBottomTabNavigator(
             <AntDesign
               name={focused ? 'gift' : 'gift'}
               size={35}
-              style={{ color: focused? '#F3A545' : tintColor }}
+              style={{ color: focused? '#ffa91f' : tintColor }}
             />
           ),
         }
@@ -52,14 +55,14 @@ const main = createBottomTabNavigator(
             <AntDesign
               name={focused ? 'setting' : 'setting'}
               size={35}
-              style={{ color: focused? '#F3A545' : tintColor }}
+              style={{ color: focused? '#ffa91f' : tintColor }}
             />
           ),
         }
   }
 }, {
   initialRouteName: 'LandingScreen',
-  activeColor: '#F3A545',
+  activeColor: '#ffa91f',
   inactiveColor: 'black',
   barStyle: {backgroundColor: 'white'},
   navigationOptions: {
