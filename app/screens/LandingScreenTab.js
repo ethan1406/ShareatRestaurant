@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {createMaterialTopTabNavigator, createAppContainer} from 'react-navigation';
 import {StyleSheet, Text, View, FlatList} from 'react-native';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import axios from 'axios';
 import {baseURL} from '../Constants.js';
 
@@ -11,7 +12,22 @@ class OpenTab extends Component<props>{
 	constructor(props) {
 		super(props);
 		this.state = {
-			data: [],
+			tableHead: ['Time', 'Table No.', 'Party', 'Special Requests', 'Pre-tip', 'Paid'],
+			tableData: [
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				['9:46am', '5', '1', 'High Chair', '$102.84', ''],
+				],
 		}
 	}
 
@@ -27,16 +43,21 @@ class OpenTab extends Component<props>{
 	render() {
 		return(
 			<View>
-			<Text style = {{fontSize: 30}}> Table #      Order Total </Text>
-			<FlatList
-			data = {this.state.data}
-			renderItem = {( { item }) => (
-				<Text  style = {{fontSize: 30}} >        {item.tableNumber}               ${item.orderTotal}</Text>)}
-			/>
+		<Table>
+          <Row data={this.state.tableHead} borderStyle={{borderBottomWidth: 1, borderBottomColor: 'black'}} textStyle={styles.text} style={{backgroundColor: '#e5e5e5'}}/>
+          <Rows data={this.state.tableData} borderStyle={{borderBottomWidth: 1, borderBottomColor: 'black'}} textStyle={styles.text}/>
+        </Table>
 			</View>
 			)
 	}
 }
+
+const styles = StyleSheet.create({
+	text: {
+		fontSize: 25,
+		alignSelf: 'center',
+	},
+});
 
 class CompletedTab extends Component{
 	render() {

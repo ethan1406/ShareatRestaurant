@@ -7,7 +7,8 @@ import {StyleSheet,
   Image,
   TouchableOpacity,
   SafeAreaView,
-  Divider} from 'react-native';
+  Divider,
+  StatusBar} from 'react-native';
   import LandingScreenTabContainer from './LandingScreenTab';
 
   type Props = {};
@@ -23,6 +24,8 @@ import {StyleSheet,
       userName: 'Anthony Davis'
     }
   }
+
+
 
   render() {
     return (
@@ -44,12 +47,6 @@ import {StyleSheet,
       {this.state.date}
       </Text>
       <LandingScreenTabContainer />
-      <View style = {styles.container}>
-      <Text style = {styles.rewardHeader}> 
-      REWARDS & PROMOTIONS
-      </Text>
-      <View style = {styles.divider}/>
-      </View>
       </View>
       )
   }
@@ -63,7 +60,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   horizontal: {
-    flex: .25,
+    flex: .18,
     justifyContent:'space-between',
     flexDirection: 'row',
     alignItems: 'center',
@@ -78,15 +75,6 @@ const styles = StyleSheet.create({
     color: 'gray',
     fontSize: 22,
     alignSelf: 'center',
-  },
-  rewardHeader: {
-    alignSelf: 'center',
-    paddingTop: 130,
-    fontSize: 20,
-  },
-  divider: {
-    borderColor: '#F3A545',
-    borderBottomWidth: 3,
   },
   restaurantHeader: {
     color: 'gray',
