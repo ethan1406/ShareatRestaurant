@@ -3,6 +3,7 @@
 import { createStackNavigator, createAppContainer} from 'react-navigation';
 
 import LoginScreen from './screens/LoginScreen';
+import TableScreen from './screens/TableScreen';
 
 
 
@@ -12,7 +13,8 @@ const AppNavigator = createStackNavigator(
       Login: {
         screen: LoginScreen
       }
-    })
+    }),
+    Table: TableScreen
   },
   {
     defaultNavigationOptions: {

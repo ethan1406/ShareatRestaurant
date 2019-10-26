@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
 'use strict';
 
 import React, {Component} from 'react';
@@ -75,7 +68,7 @@ export default class LoginScreen extends Component<Props> {
           <TouchableOpacity onPress={() => {}}>
              <Image style={{height: 50, width: 50}} source={require('../img/facebook.png')} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=> {}} color='#000000' onPress={()=> this.props.navigation.navigate('Signup')}>
+          <TouchableOpacity onPress={()=> {}} color='#000000' onPress={()=> this.props.navigation.navigate('Table')}>
               <Text style={[styles.btnText, {fontSize: 15, color:'#F3A545'}]}> Sign up for Shareat </Text>
           </TouchableOpacity>
         </View>
