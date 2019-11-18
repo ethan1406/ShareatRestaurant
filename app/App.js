@@ -12,9 +12,15 @@ import LoginScreen from './screens/LoginScreen';
 import LandingScreen from './screens/LandingScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ProfileScreen from './screens/ProfileScreen';
-import RewardsScreen from './screens/RewardsScreen';
+import RewardsScreen from './screens/NewRewardScreen';
 import SplashScreen from './screens/SplashScreen';
 import AddRewardScreen from './screens/AddRewardScreen';
+import AboutScreen from './screens/AboutScreen';
+import FeedbackScreen from './screens/FeedbackScreen';
+import NotificationScreen from './screens/NotificationScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import PrivacySecurityScreen from './screens/PrivacySecurityScreen';
+import StatisticsScreen from './screens/StatisticsScreen';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 StatusBar.setBarStyle( 'light-content',true)
@@ -94,6 +100,42 @@ const AppNavigator = createStackNavigator(
       },
       AddReward: {
         screen: AddRewardScreen,
+        navigationOptions: {
+          header: null,
+        }
+      },
+      Statistics: {
+        screen: StatisticsScreen,
+          navigationOptions: {
+          header: null,
+        }
+      },
+      Payment: {
+        screen: PaymentScreen,
+        navigationOptions: {
+          header: null,
+        }
+      },
+      Notification: {
+        screen: NotificationScreen,
+        navigationOptions: {
+          header: null,
+        }
+      },
+      PrivacySecurity: {
+        screen: PrivacySecurityScreen,
+        navigationOptions: {
+          header: null,
+        }
+      },
+      Feedback: {
+        screen: FeedbackScreen,
+        navigationOptions: {
+          header: null,
+        }
+      },
+      About: {
+        screen: AboutScreen,
         navigationOptions: {
           header: null,
         }

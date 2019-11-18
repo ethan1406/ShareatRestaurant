@@ -32,27 +32,27 @@ export default class SettingsScreen extends Component<props> {
       <Text style={styles.buttonText}> Sign Out </Text>
       </TouchableOpacity>
       <View style={{marginVertical: 40}}></View>
-      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> this.props.navigation.navigate('Statistics')} color='#000000'>
       <Image style={styles.settingImage} source={require('../img/statistics.png')} />
       <Text style = {styles.settingText}> Statistics </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> this.props.navigation.navigate('Payment')} color='#000000'>
       <Image style={styles.optionImage} source={require('../img/payment.png')} />
       <Text style = {styles.settingText}> Payment </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> this.props.navigation.navigate('Notification')} color='#000000'>
       <Image style={styles.optionImage} source={require('../img/notification.png')} />
       <Text style = {styles.settingText}> Notification </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> this.props.navigation.navigate('PrivacySecurity')} color='#000000'>
       <Image style={styles.settingImage} source={require('../img/privacy.png')} />
       <Text style = {styles.settingText}> Privacy & Security </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> this.props.navigation.navigate('Feedback')} color='#000000'>
       <Image style={styles.settingImage} source={require('../img/receipt.png')} />
       <Text style = {styles.settingText}> Send Feedback </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.settingContainer} onPress={()=> {}} color='#000000'>
+      <TouchableOpacity style={styles.settingContainer} onPress={()=> this.props.navigation.navigate('About')} color='#000000'>
       <Image style={styles.optionImage} source={require('../img/about.png')} />
       <Text style = {styles.settingText}> About </Text>
       </TouchableOpacity>

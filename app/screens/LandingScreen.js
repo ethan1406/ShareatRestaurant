@@ -31,7 +31,7 @@ import {StyleSheet,
     return (
       <View style = {styles.container}>
       <View style = {styles.horizontal}>
-      <Image style = {styles.logo} source={require('../img/ShareatPOS.png')} />
+      <Image style = {styles.logo} source={require('../img/ShareatPOS2.png')} />
       <Text style = {styles.restaurantHeader}>
       {this.state.restaurantName}
       </Text>
@@ -43,9 +43,6 @@ import {StyleSheet,
       </Text>
       </TouchableOpacity>
       </View>
-      <Text style = {styles.date}>
-      {this.state.date}
-      </Text>
       <LandingScreenTabContainer />
       </View>
       )
@@ -66,19 +63,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: 15,
     paddingRight: 25,
-  },
+    paddingTop: 20,
+  }, 
   logo: {
   	width: 220,
   	height: 35,
   },
-  date: {
-    color: 'gray',
-    fontSize: 21,
-    alignSelf: 'center',
-  },
   restaurantHeader: {
     color: 'gray',
-    fontSize: 25,
+    fontSize: 30,
     marginRight: 30,
   },
   userName: {

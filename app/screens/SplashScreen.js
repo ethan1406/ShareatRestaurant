@@ -28,7 +28,6 @@ export default class SplashScreen extends Component<props> {
     return(
       <View style = {styles.container} >
       <Image style = {styles.logo} source={require('../img/ShareatPOS.png')} />
-      <Text style = {styles.header}> "INSERT CATCHY PHRASE HERE" </Text>
       </View>
       )
   }
